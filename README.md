@@ -4,9 +4,10 @@ A webdesign project for a tropical themed spa &amp; resort. 🌴
 # Goals
 
 - fully fleshed out website
-  - implementin animations, css-grid and an interactive menu
+  - using animations, css-grid and an interactive menu
 - creating BEM components
 - responsive design
+- dialog box implementation
 - learning & using SASS
 
 
