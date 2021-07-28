@@ -5,7 +5,7 @@ A webdesign project for a tropical themed spa &amp; resort. 🌴
 
 - fully fleshed out website
   - implementin animations, css-grid and an interactive menu
--- creating BEM components
+- creating BEM components
 - responsive design
 - learning & using SASS
 
