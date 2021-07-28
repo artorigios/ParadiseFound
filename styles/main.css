@@ -138,4 +138,18 @@ html {
     background-color: rgba(139, 217, 23, 0.7);
     margin: auto;
     width: 65rem;
+    animation-name: header_subtitle;
+    animation-delay: 2.5s;
+    animation-duration: 3.5s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: both;
+}
+
+@keyframes header_subtitle {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opcaity: 1;
+    }
 }
