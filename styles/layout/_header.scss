@@ -1,0 +1,64 @@
+.header {
+    height: 40rem;
+    background-image: linear-gradient(-5.71deg, white 49.8%, transparent 50.2%), url("../images/pexels-alesia-kozik-6129555.jpg");
+    background-repeat: no-repeat, no-repeat;
+    background-position: center 100%, center center;
+    background-size: 100vw 10vw, cover;
+}
+
+.header__title-container {
+    clear: both;
+    padding-top: 3rem;
+}
+
+.header__title {
+    text-transform: uppercase;
+    font-weight: 700;
+    color: white;
+    font-size: 9rem;
+    line-height: 80%;
+    text-align: center;
+    text-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.5);
+    animation-name: header_title-font-weight;
+    animation-delay: 0.5s;
+    animation-duration: 2.5s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: both;
+}
+
+@keyframes header_title-font-weight {
+    0% {
+        opacity: 0;
+        font-weight: 100;
+    }
+    100% {
+        opcaity: 1;
+        font-weight: 700;
+    }
+}
+
+.header__subtitle {
+    text-transform: uppercase;
+    color: white;
+    font-size: 1em;
+    text-align: center;
+    letter-spacing: 0.7rem;
+    text-shadow: 0 0 0.5rem rgba(0, 0, 0, 1);
+    background-color: rgba(139, 217, 23, 0.7);
+    margin: auto;
+    width: 65rem;
+    animation-name: header_subtitle;
+    animation-delay: 2.5s;
+    animation-duration: 3.5s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: both;
+}
+
+@keyframes header_subtitle {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opcaity: 1;
+    }
+}
