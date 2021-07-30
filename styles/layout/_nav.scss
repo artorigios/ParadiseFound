@@ -1,50 +1,48 @@
-.nav__list-item {
-    list-style-type: none;
-    display: block;
-    float: left;
-}
-
-.nav__list-item--menu {
-    float: right;
-    font-size: 4rem;
-}
-
-.nav__list-item-link {
-    color: white;
-    text-decoration: none;
-    padding: 0.25rem 0.25rem;
-    margin-top: 2rem;
-    margin-left: 2rem;
-    margin-right: 2rem;
-    display: block;
-    text-shadow: 0 0 0.5rem black;
-    text-transform: lowercase;
-}
-
-.nav__list-item-link:hover {
-    border-bottom: 0.2rem solid #8bd917;
-    opacity: 0.9;
-}
-
-.nav__list-item--menu .nav__list-item-link {
-    margin-top: -0.25rem;
-}
-
-.nav__list-item--menu .nav__list-item-link:hover {
-    border-bottom: none;
-    opacity: 0.9;
-}
-
-.nav__list-item-link--logo {
-    margin-top: 1rem;
-}
-
-.nav__list-item-logo {
-    width: 4rem;
-    height: 4rem;
-}
-
-.nav__list-item-link--logo:hover {
-    border-bottom: none;
-    opacity: 0.9;
-}
+    .nav__list-item {
+        list-style-type: none;
+        display: block;
+        float: left;
+        &--mobile-hidden {
+            @media (max-width: 62em) {
+                display: none;
+            }
+        }
+        &--menu {
+            float: right;
+            font-size: 4rem;
+        }
+    }
+    
+    .nav__list-item-link {
+        color: white;
+        text-decoration: none;
+        padding: 0.25rem 0.25rem;
+        margin-top: 2rem;
+        margin-left: 2rem;
+        margin-right: 2rem;
+        display: block;
+        text-shadow: 0 0 0.5rem black;
+        text-transform: lowercase;
+        &:hover {
+            border-bottom: 0.2rem solid #8bd917;
+            opacity: 0.9;
+        }
+        .nav__list-item--menu & {
+            margin-top: -0.25rem;
+            &:hover {
+                border-bottom: none;
+                opacity: 0.9;
+            }
+            &--logo {
+                margin-top: 1rem;
+                &:hover {
+                    border-bottom: none;
+                    opacity: 0.9;
+                }
+            }
+        }
+        .nav__list-item-logo {
+            width: 4rem;
+            height: 4rem;
+        }
+    }
