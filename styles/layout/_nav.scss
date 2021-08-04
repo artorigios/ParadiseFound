@@ -1,9 +1,10 @@
+    @use "../abstracts" as *;
     .nav__list-item {
         list-style-type: none;
         display: block;
         float: left;
         &--mobile-hidden {
-            @media (max-width: 62em) {
+            @media screen and (max-width: $breakpoint-s) {
                 display: none;
             }
         }
@@ -14,7 +15,7 @@
     }
     
     .nav__list-item-link {
-        color: white;
+        color: $prim-color;
         text-decoration: none;
         padding: 0.25rem 0.25rem;
         margin-top: 2rem;
@@ -24,7 +25,7 @@
         text-shadow: 0 0 0.5rem black;
         text-transform: lowercase;
         &:hover {
-            border-bottom: 0.2rem solid #8bd917;
+            border-bottom: 0.2rem solid $sec-color;
             opacity: 0.9;
         }
         .nav__list-item--menu & {
@@ -32,6 +33,11 @@
             &:hover {
                 border-bottom: none;
                 opacity: 0.9;
+            }
+            &--mobile-hidden {
+                @media screen and (max-width: $breakpoint-m) {
+                    display: none;
+                }
             }
             &--logo {
                 margin-top: 1rem;

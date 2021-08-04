@@ -1,5 +1,6 @@
+@use "../abstracts" as *;
 .icon {
-    fill: currentColor;
+    fill: $prim-color;
     height: 1em;
     vertical-align: middle;
     position: relative;

@@ -23,8 +23,11 @@ html {
   font-family: "Jost", sans-serif;
 }
 
+/** Colors */
+/** Paths */
+/** Breakpoints */
 .icon {
-  fill: currentColor;
+  fill: #ffffff;
   height: 1em;
   vertical-align: middle;
   position: relative;
@@ -38,21 +41,58 @@ html {
 
 .header {
   height: 40rem;
+  width: 100vw;
   background-image: linear-gradient(-5.71deg, white 49.8%, transparent 50.2%), url("../images/pexels-alesia-kozik-6129555.jpg");
   background-repeat: no-repeat, no-repeat;
   background-position: center 100%, center center;
   background-size: 100vw 10vw, cover;
+}
+@media screen and (max-width: 1280px) {
+  .header {
+    height: calc(18rem + 32vw);
+  }
+}
+@media screen and (max-width: 960px) {
+  .header {
+    height: calc(16rem + 32vw);
+  }
+}
+@media screen and (max-width: 768px) {
+  .header {
+    height: calc(14rem + 32vw);
+  }
+}
+@media screen and (max-width: 320px) {
+  .header {
+    height: calc(12rem + 32vw);
+  }
+}
+
+.header__container {
+  position: relative;
+  height: 40rem;
+  width: 100vw;
 }
 
 .header__title-container {
   clear: both;
   padding-top: 3rem;
 }
+@media screen and (max-width: 960px) {
+  .header__title-container {
+    padding-top: 3rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .header__title-container {
+    padding-top: 6rem;
+  }
+}
 
 .header__title {
   text-transform: uppercase;
   font-weight: 700;
-  color: white;
+  color: #ffffff;
   font-size: 9rem;
   line-height: 80%;
   text-align: center;
@@ -63,6 +103,16 @@ html {
   animation-timing-function: ease-in-out;
   animation-fill-mode: both;
 }
+@media screen and (max-width: 960px) {
+  .header__title {
+    font-size: 7rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .header__title {
+    font-size: 5rem;
+  }
+}
 
 @keyframes header_title-font-weight {
   0% {
@@ -70,13 +120,13 @@ html {
     font-weight: 100;
   }
   100% {
-    opcaity: 1;
+    opacity: 1;
     font-weight: 700;
   }
 }
 .header__subtitle {
   text-transform: uppercase;
-  color: white;
+  color: #ffffff;
   font-size: 1em;
   text-align: center;
   letter-spacing: 0.7rem;
@@ -90,13 +140,25 @@ html {
   animation-timing-function: ease-in-out;
   animation-fill-mode: both;
 }
+@media screen and (max-width: 960px) {
+  .header__subtitle {
+    letter-spacing: 0.5rem;
+    width: 55rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .header__subtitle {
+    letter-spacing: 0.3rem;
+    width: 45rem;
+  }
+}
 
 @keyframes header_subtitle {
   0% {
     opacity: 0;
   }
   100% {
-    opcaity: 1;
+    opacity: 1;
   }
 }
 .nav__list-item {
@@ -104,7 +166,7 @@ html {
   display: block;
   float: left;
 }
-@media (max-width: 62em) {
+@media screen and (max-width: 768px) {
   .nav__list-item--mobile-hidden {
     display: none;
   }
@@ -115,7 +177,7 @@ html {
 }
 
 .nav__list-item-link {
-  color: white;
+  color: #ffffff;
   text-decoration: none;
   padding: 0.25rem 0.25rem;
   margin-top: 2rem;
@@ -135,6 +197,11 @@ html {
 .nav__list-item--menu .nav__list-item-link:hover {
   border-bottom: none;
   opacity: 0.9;
+}
+@media screen and (max-width: 960px) {
+  .nav__list-item--menu .nav__list-item-link--mobile-hidden {
+    display: none;
+  }
 }
 .nav__list-item--menu .nav__list-item-link--logo {
   margin-top: 1rem;

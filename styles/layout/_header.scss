@@ -1,20 +1,47 @@
+@use "../abstracts" as *;
 .header {
     height: 40rem;
-    background-image: linear-gradient(-5.71deg, white 49.8%, transparent 50.2%), url("../images/pexels-alesia-kozik-6129555.jpg");
+    width: 100vw;
+    background-image: linear-gradient(-5.71deg, white 49.8%, transparent 50.2%),
+    url("#{$image-path}/pexels-alesia-kozik-6129555.jpg");
     background-repeat: no-repeat, no-repeat;
     background-position: center 100%, center center;
     background-size: 100vw 10vw, cover;
+    @media screen and (max-width: $breakpoint-l) {
+        height: calc(18rem + 32vw)
+    }
+    @media screen and (max-width: $breakpoint-m) {
+        height: calc(16rem + 32vw)
+    }
+    @media screen and (max-width: $breakpoint-s) {
+        height: calc(14rem + 32vw)
+    }
+    @media screen and (max-width: $breakpoint-xs) {
+        height: calc(12rem + 32vw)
+    }
+}
+
+.header__container {
+    position: relative;
+    height: 40rem;
+    width: 100vw;
 }
 
 .header__title-container {
     clear: both;
     padding-top: 3rem;
+    @media screen and (max-width: $breakpoint-m) {
+        padding-top: 3rem;
+    }
+    @media screen and (max-width: $breakpoint-s) {
+        padding-top: 6rem;
+    }
 }
 
 .header__title {
     text-transform: uppercase;
     font-weight: 700;
-    color: white;
+    color: $prim-color;
     font-size: 9rem;
     line-height: 80%;
     text-align: center;
@@ -24,6 +51,12 @@
     animation-duration: 2.5s;
     animation-timing-function: ease-in-out;
     animation-fill-mode: both;
+    @media screen and (max-width: $breakpoint-m) {
+        font-size: 7rem;
+    }
+    @media screen and (max-width: $breakpoint-s) {
+        font-size: 5rem;
+    }
 }
 
 @keyframes header_title-font-weight {
@@ -32,19 +65,19 @@
         font-weight: 100;
     }
     100% {
-        opcaity: 1;
+        opacity: 1;
         font-weight: 700;
     }
 }
 
 .header__subtitle {
     text-transform: uppercase;
-    color: white;
+    color: $prim-color;
     font-size: 1em;
     text-align: center;
     letter-spacing: 0.7rem;
     text-shadow: 0 0 0.5rem rgba(0, 0, 0, 1);
-    background-color: rgba(139, 217, 23, 0.7);
+    background-color: rgba($sec-color, 0.7);
     margin: auto;
     width: 65rem;
     animation-name: header_subtitle;
@@ -52,6 +85,14 @@
     animation-duration: 3.5s;
     animation-timing-function: ease-in-out;
     animation-fill-mode: both;
+    @media screen and (max-width: $breakpoint-m) {
+        letter-spacing: 0.5rem;
+        width: 55rem;
+    }
+    @media screen and (max-width: $breakpoint-s) {
+        letter-spacing: 0.3rem;
+        width: 45rem;
+    }
 }
 
 @keyframes header_subtitle {
@@ -59,6 +100,6 @@
         opacity: 0;
     }
     100% {
-        opcaity: 1;
+        opacity: 1;
     }
 }
