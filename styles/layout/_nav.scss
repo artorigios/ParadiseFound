@@ -1,54 +1,75 @@
     @use "../abstracts" as *;
     .nav__list-item {
         list-style-type: none;
+        font-size: 1.3rem;
         display: block;
         float: left;
         &--mobile-hidden {
-            @media screen and (max-width: $breakpoint-s) {
+            @media (max-width: $breakpoint-s) {
                 display: none;
             }
         }
         &--menu {
             float: right;
+            margin-right: 2rem;
             font-size: 4rem;
+        }
+    }
+    
+    .nav__list-item-pos {
+        position: relative;
+        text-decoration: none;
+        margin-top: 2rem;
+        display: block;
+        text-shadow: 0 0 0.5rem black;
+        &--logo {
+            margin-top: 2.8rem;
+            margin-left: 2rem;
+        }
+        .nav__list-item-logo {
+            width: 4rem;
+            height: 4rem;
         }
     }
     
     .nav__list-item-link {
         color: $prim-color;
+        position: relative;
         text-decoration: none;
         padding: 0.25rem 0.25rem;
-        margin-top: 2rem;
-        margin-left: 2rem;
-        margin-right: 2rem;
+        margin-top: 4rem;
+        margin-left: 2.5rem;
+        margin-right: 1.6rem;
         display: block;
         text-shadow: 0 0 0.5rem black;
         text-transform: lowercase;
-        &:hover {
-            border-bottom: 0.2rem solid $sec-color;
+        &::before {
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: $sec-color;
+            visibility: hidden;
+            transition: all 0.4s ease-in-out;
+        }
+        &:hover::before {
+            visibility: visible;
+            width: 100%;
             opacity: 0.9;
         }
         .nav__list-item--menu & {
-            margin-top: -0.25rem;
+            margin-right: 0;
+            padding-right: 0;
+            transition: none;
             &:hover {
-                border-bottom: none;
                 opacity: 0.9;
             }
             &--mobile-hidden {
-                @media screen and (max-width: $breakpoint-m) {
+                @media (max-width: $breakpoint-m) {
                     display: none;
                 }
             }
-            &--logo {
-                margin-top: 1rem;
-                &:hover {
-                    border-bottom: none;
-                    opacity: 0.9;
-                }
-            }
-        }
-        .nav__list-item-logo {
-            width: 4rem;
-            height: 4rem;
         }
     }

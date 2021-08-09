@@ -1,0 +1,61 @@
+@use "../abstracts" as *;
+.intro {
+    margin-top: 3rem;
+}
+
+.intro__content {
+    float: left;
+    width: 33.33%;
+    color: $font-color;
+}
+
+.intro__title {
+    text-transform: uppercase;
+    margin-top: 4rem;
+    color: $font-color;
+    font-weight: 500;
+    &::before {
+        content: "";
+        display: block;
+        width: 3rem;
+        height: 0.25rem;
+        background-color: $thir-color;
+        margin-bottom: 0.6rem;
+    }
+}
+
+.intro__text {
+    color: $font-color;
+    margin-top: 0.3rem;
+    font-weight: 400;
+    text-align: justify;
+}
+
+.intro__images {
+    float: left;
+    width: 66.66%;
+    position: relative;
+}
+
+.intro__image {
+    position: absolute;
+    width: 35%;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    &--first {
+        top: 6rem;
+        left: 75%;
+        z-index: 1;
+    }
+    &--second {
+        top: 6rem;
+        left: 35%;
+        z-index: 2;
+    }
+    &--third {
+        top: 23rem;
+        left: 55%;
+        z-index: 3;
+    }
+    &:hover {}
+}
