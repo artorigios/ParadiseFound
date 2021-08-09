@@ -7,6 +7,7 @@
     float: left;
     width: 33.33%;
     color: $font-color;
+    margin-bottom: 10rem;
 }
 
 .intro__title {
@@ -39,23 +40,13 @@
 
 .intro__image {
     position: absolute;
-    width: 35%;
-    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
-    border-radius: 50%;
-    &--first {
+    width: 55%;
+    &--coco {
         top: 6rem;
-        left: 75%;
-        z-index: 1;
+        left: 37%;
+        border-radius: 100%;
+        -webkit-box-shadow: 12px 29px 81px 0px rgba(0, 0, 0, 0.5);
+        -moz-box-shadow: 12px 29px 81px 0px rgba(0, 0, 0, 0.5);
+        box-shadow: 12px 29px 81px 0px rgba(0, 0, 0, 0.5);
     }
-    &--second {
-        top: 6rem;
-        left: 35%;
-        z-index: 2;
-    }
-    &--third {
-        top: 23rem;
-        left: 55%;
-        z-index: 3;
-    }
-    &:hover {}
 }
