@@ -8,11 +8,23 @@
     width: 33.33%;
     color: $font-color;
     margin-bottom: 10rem;
+    margin-top: 4rem;
+    @media (max-width: $breakpoint-l) {
+        width: 50%;
+        padding-top: 0;
+    }
+    @media (max-width: $breakpoint-m) {
+        width: 100%;
+        padding-top: 0;
+    }
+    @media (max-width: $breakpoint-s) {
+        width: 100%;
+        padding-top: 0;
+    }
 }
 
 .intro__title {
     text-transform: uppercase;
-    margin-top: 4rem;
     color: $font-color;
     font-weight: 500;
     &::before {
@@ -35,7 +47,21 @@
 .intro__images {
     float: left;
     width: 66.66%;
+    margin-top: 3rem;
+    height: clamp(10rem, calc(35vw + 10rem), 36rem);
     position: relative;
+    @media (max-width: $breakpoint-l) {
+        margin-top: 3.5rem;
+        height: clamp(10rem, calc(25vw + 10rem), 36rem);
+        width: 50%;
+        padding-right: 0;
+    }
+    @media (max-width: $breakpoint-m) {
+        visibility: hidden;
+    }
+    @media (max-width: $breakpoint-s) {
+        visibility: hidden;
+    }
 }
 
 .intro__image {
@@ -61,5 +87,8 @@
         100% {
             -webkit-box-shadow: 0 0 0 0 rgba(204, 169, 44, 0);
         }
+    }
+    @media (max-width: $breakpoint-s) {
+        visibility: hidden;
     }
 }

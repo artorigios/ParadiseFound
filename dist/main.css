@@ -37,6 +37,7 @@ html {
 .container {
   max-width: 80rem;
   margin: 0px auto;
+  padding: 0 2rem;
 }
 
 .header {
@@ -305,11 +306,29 @@ html {
   width: 33.33%;
   color: #3d332c;
   margin-bottom: 10rem;
+  margin-top: 4rem;
+}
+@media (max-width: 75em) {
+  .intro__content {
+    width: 50%;
+    padding-top: 0;
+  }
+}
+@media (max-width: 62em) {
+  .intro__content {
+    width: 100%;
+    padding-top: 0;
+  }
+}
+@media (max-width: 48em) {
+  .intro__content {
+    width: 100%;
+    padding-top: 0;
+  }
 }
 
 .intro__title {
   text-transform: uppercase;
-  margin-top: 4rem;
   color: #3d332c;
   font-weight: 500;
 }
@@ -332,7 +351,27 @@ html {
 .intro__images {
   float: left;
   width: 66.66%;
+  margin-top: 3rem;
+  height: clamp(10rem, calc(35vw + 10rem), 36rem);
   position: relative;
+}
+@media (max-width: 75em) {
+  .intro__images {
+    margin-top: 3.5rem;
+    height: clamp(10rem, calc(25vw + 10rem), 36rem);
+    width: 50%;
+    padding-right: 0;
+  }
+}
+@media (max-width: 62em) {
+  .intro__images {
+    visibility: hidden;
+  }
+}
+@media (max-width: 48em) {
+  .intro__images {
+    visibility: hidden;
+  }
 }
 
 .intro__image {
@@ -358,6 +397,11 @@ html {
   }
   100% {
     -webkit-box-shadow: 0 0 0 0 rgba(204, 169, 44, 0);
+  }
+}
+@media (max-width: 48em) {
+  .intro__image {
+    visibility: hidden;
   }
 }
 
