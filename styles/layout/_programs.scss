@@ -1,0 +1,54 @@
+@use "../abstracts/" as *;
+.programs {
+    background-color: $programs-bg;
+    height: 30rem;
+    position: relative;
+}
+
+.programs::before {
+    content: "bye, stress!";
+    position: absolute;
+    font-size: 10rem;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: $prim-color;
+    opacity: 0.4;
+}
+
+.programs__title {
+    color: white;
+    position: relative;
+    text-transform: uppercase;
+    font-size: 3rem;
+    font-weight: 500;
+    letter-spacing: 0.07em;
+    text-align: center;
+    padding-top: 3rem;
+    padding-bottom: 2rem;
+}
+
+.programs__container {
+    position: relative;
+    @include make-container();
+}
+
+.programs_content-pricetag {
+    width: 1.5rem;
+}
+
+.programs__cards {
+    display: flex;
+}
+
+.programs__card {
+    width: 20%;
+}
+
+.programs__card-img {
+    width: 100%;
+}
+
+.programs__card-icon {
+    width: 4rem;
+}

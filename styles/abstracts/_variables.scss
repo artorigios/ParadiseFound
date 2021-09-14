@@ -5,6 +5,8 @@ $prim-color: #ffffff!default;
 $sec-color: #8bd917!default;
 $font-color: #3d332c!default;
 $thir-color: color.scale($sec-color, $lightness: -15%)!default;
+$programs-bg: #9a9b99!default;
+$sec-color-light: color.scale($sec-color, $lightness: +25%)!default;
 
 /** Paths */
 
@@ -13,7 +15,19 @@ $video-path: "../videos";
 
 /** Breakpoints */
 
+
+/** 1200px oder schmaler */
+
 $breakpoint-l: 75em!default;
+
+/** 992px oder schmaler */
+
 $breakpoint-m: 62em!default;
+
+/** 768px oder schmaler */
+
 $breakpoint-s: 48em!default;
+
+/** 576px oder schmaler */
+
 $breakpoint-xs: 36em!default;

@@ -26,6 +26,10 @@ html {
 /** Colors */
 /** Paths */
 /** Breakpoints */
+/** 1200px oder schmaler */
+/** 992px oder schmaler */
+/** 768px oder schmaler */
+/** 576px oder schmaler */
 .icon {
   fill: #ffffff;
   height: 1em;
@@ -38,6 +42,11 @@ html {
   max-width: 80rem;
   margin: 0px auto;
   padding: 0 2rem;
+}
+@media (max-width: 36em) {
+  .container {
+    padding: 0 1 rem;
+  }
 }
 
 .header {
@@ -68,7 +77,14 @@ html {
 
 .header__container {
   position: relative;
-  max-width: 110rem;
+  max-width: 80rem;
+  margin: 0px auto;
+  padding: 0 2rem;
+}
+@media (max-width: 36em) {
+  .header__container {
+    padding: 0 1 rem;
+  }
 }
 
 .header::before,
@@ -299,31 +315,32 @@ html {
 
 .intro {
   margin-top: 3rem;
+  padding-bottom: 3rem;
 }
 
-.intro__content {
+.intro__column-text {
   float: left;
   width: 33.33%;
-  color: #3d332c;
-  margin-bottom: 10rem;
-  margin-top: 4rem;
+  padding-right: 4.5rem;
+  padding-top: 4rem;
 }
 @media (max-width: 75em) {
-  .intro__content {
-    width: 50%;
-    padding-top: 0;
+  .intro__column-text {
+    padding-right: 3rem;
   }
 }
 @media (max-width: 62em) {
-  .intro__content {
-    width: 100%;
+  .intro__column-text {
     padding-top: 0;
+    padding-right: 0;
+    width: 50%;
   }
 }
 @media (max-width: 48em) {
-  .intro__content {
+  .intro__column-text {
     width: 100%;
-    padding-top: 0;
+    float: none;
+    padding-bottom: 3rem;
   }
 }
 
@@ -339,44 +356,46 @@ html {
   height: 0.25rem;
   background-color: #76b814;
   margin-bottom: 0.6rem;
+  font-weight: bold;
 }
 
 .intro__text {
   color: #3d332c;
-  margin-top: 0.3rem;
-  font-weight: 400;
   text-align: justify;
+  margin-top: 0.2rem;
+  font-size: 1.1rem;
 }
 
 .intro__images {
   float: left;
   width: 66.66%;
-  margin-top: 3rem;
   height: clamp(10rem, calc(35vw + 10rem), 36rem);
   position: relative;
 }
-@media (max-width: 75em) {
-  .intro__images {
-    margin-top: 3.5rem;
-    height: clamp(10rem, calc(25vw + 10rem), 36rem);
-    width: 50%;
-    padding-right: 0;
-  }
-}
 @media (max-width: 62em) {
   .intro__images {
-    visibility: hidden;
+    width: 50%;
+    height: clamp(10rem, calc(25vw + 10rem), 36rem);
   }
 }
 @media (max-width: 48em) {
   .intro__images {
-    visibility: hidden;
+    width: 80%;
+    float: none;
+    margin: 0 auto;
+    height: clamp(10rem, calc(40vw + 10rem), 36rem);
+  }
+}
+@media (max-width: 36em) {
+  .intro__images {
+    width: 90%;
+    height: clamp(10rem, calc(45vw + 10rem), 36rem);
   }
 }
 
 .intro__image {
   position: absolute;
-  width: 55%;
+  width: 35%;
 }
 .intro__image--coco {
   filter: brightness(0.75);
@@ -403,6 +422,67 @@ html {
   .intro__image {
     visibility: hidden;
   }
+}
+
+.programs {
+  background-color: #9a9b99;
+  height: 30rem;
+  position: relative;
+}
+
+.programs::before {
+  content: "bye, stress!";
+  position: absolute;
+  font-size: 10rem;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #ffffff;
+  opacity: 0.4;
+}
+
+.programs__title {
+  color: white;
+  position: relative;
+  text-transform: uppercase;
+  font-size: 3rem;
+  font-weight: 500;
+  letter-spacing: 0.07em;
+  text-align: center;
+  padding-top: 3rem;
+  padding-bottom: 2rem;
+}
+
+.programs__container {
+  position: relative;
+  max-width: 80rem;
+  margin: 0px auto;
+  padding: 0 2rem;
+}
+@media (max-width: 36em) {
+  .programs__container {
+    padding: 0 1 rem;
+  }
+}
+
+.programs_content-pricetag {
+  width: 1.5rem;
+}
+
+.programs__cards {
+  display: flex;
+}
+
+.programs__card {
+  width: 20%;
+}
+
+.programs__card-img {
+  width: 100%;
+}
+
+.programs__card-icon {
+  width: 4rem;
 }
 
 /*# sourceMappingURL=main.css.map */

@@ -1,25 +1,26 @@
 @use "../abstracts" as *;
 .intro {
     margin-top: 3rem;
+    padding-bottom: 3rem;
 }
 
-.intro__content {
+.intro__column-text {
     float: left;
     width: 33.33%;
-    color: $font-color;
-    margin-bottom: 10rem;
-    margin-top: 4rem;
+    padding-right: 4.5rem;
+    padding-top: 4rem;
     @media (max-width: $breakpoint-l) {
-        width: 50%;
-        padding-top: 0;
+        padding-right: 3rem;
     }
     @media (max-width: $breakpoint-m) {
-        width: 100%;
         padding-top: 0;
+        padding-right: 0;
+        width: 50%;
     }
     @media (max-width: $breakpoint-s) {
         width: 100%;
-        padding-top: 0;
+        float: none;
+        padding-bottom: 3rem;
     }
 }
 
@@ -34,39 +35,41 @@
         height: 0.25rem;
         background-color: $thir-color;
         margin-bottom: 0.6rem;
+        font-weight: bold;
     }
 }
 
 .intro__text {
     color: $font-color;
-    margin-top: 0.3rem;
-    font-weight: 400;
     text-align: justify;
+    margin-top: 0.2rem;
+    font-size: 1.1rem;
 }
 
 .intro__images {
     float: left;
     width: 66.66%;
-    margin-top: 3rem;
     height: clamp(10rem, calc(35vw + 10rem), 36rem);
     position: relative;
-    @media (max-width: $breakpoint-l) {
-        margin-top: 3.5rem;
-        height: clamp(10rem, calc(25vw + 10rem), 36rem);
-        width: 50%;
-        padding-right: 0;
-    }
     @media (max-width: $breakpoint-m) {
-        visibility: hidden;
+        width: 50%;
+        height: clamp(10rem, calc(25vw + 10rem), 36rem);
     }
     @media (max-width: $breakpoint-s) {
-        visibility: hidden;
+        width: 80%;
+        float: none;
+        margin: 0 auto;
+        height: clamp(10rem, calc(40vw + 10rem), 36rem);
+    }
+    @media (max-width: $breakpoint-xs) {
+        width: 90%;
+        height: clamp(10rem, calc(45vw + 10rem), 36rem);
     }
 }
 
 .intro__image {
     position: absolute;
-    width: 55%;
+    width: 35%;
     &--coco {
         filter: brightness(0.75);
         top: 6.5rem;

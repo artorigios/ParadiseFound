@@ -1,6 +1,4 @@
 @use "../abstracts" as *;
 .container {
-    max-width: 80rem;
-    margin: 0px auto;
-    padding: 0 2rem;
+    @include make-container();
 }

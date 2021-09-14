@@ -25,7 +25,7 @@
 
 .header__container {
     position: relative;
-    max-width: 110rem;
+    @include make-container();
 }
 
 .header::before,
