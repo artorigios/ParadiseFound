@@ -30,7 +30,7 @@
         letter-spacing: 0.07em;
         text-align: center;
         padding-top: 3rem;
-        padding-bottom: 2rem;
+        padding-bottom: 2.5rem;
         margin-bottom: 2rem;
     }
     
@@ -56,7 +56,7 @@
         transition: transform $-animation-duration ease-in-out;
         transform: scale(1);
         &:hover {
-            transform: scale(1.1);
+            transform: scale(1.05);
             box-shadow: 0 0 0.25 black;
         }
     }
