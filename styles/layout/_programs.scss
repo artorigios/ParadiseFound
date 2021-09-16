@@ -104,7 +104,7 @@
         left: 0;
         width: 100%;
         height: $-programs-icon-width;
-        box-shadow: 0 0 1 black;
+        box-shadow: 0 0 0.1rem black;
         z-index: 4;
         transform: translate(calc(-100% + #{$-programs-icon-width}), 0);
         transition: transform $-animation-duration ease-in-out;
