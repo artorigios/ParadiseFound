@@ -426,35 +426,60 @@ html {
 
 .programs {
   background-color: #c6c1b4;
-  height: 38rem;
   margin-bottom: 5rem;
   position: relative;
+  padding-bottom: 8rem;
 }
 
 .programs::before {
+  bottom: 0;
+  left: 0;
+  right: 0;
   position: absolute;
   content: "bye, stress!";
-  top: 28.5rem;
-  transform: translate(calc(50% + 12rem), 0);
-  font-size: 7rem;
+  font-size: min(calc(100vw / 20), 30rem);
   text-transform: uppercase;
   font-weight: bold;
   color: #ffffff;
-  opacity: 0.4;
   text-align: center;
+  opacity: 0.4;
+  white-space: nowrap;
+  overflow: hidden;
+}
+@media (max-width: 75em) {
+  .programs::before {
+    bottom: 2rem;
+  }
+}
+@media (max-width: 62em) {
+  .programs::before {
+    bottom: 2rem;
+  }
+}
+@media (max-width: 48em) {
+  .programs::before {
+    bottom: 3rem;
+  }
+}
+@media (max-width: 36em) {
+  .programs::before {
+    bottom: 3rem;
+  }
 }
 
 .programs__title {
   color: white;
   position: relative;
   text-transform: uppercase;
-  font-size: 3rem;
+  font-size: 4rem;
   font-weight: 500;
   letter-spacing: 0.07em;
   text-align: center;
   padding-top: 3rem;
-  padding-bottom: 2.5rem;
   margin-bottom: 2rem;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
 .programs__container {
@@ -474,13 +499,16 @@ html {
 }
 
 .programs__cards {
+  align-items: center;
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
 .programs__card {
-  width: 20%;
+  flex: 0 0 15.2rem;
   height: 22rem;
-  margin-top: -4rem;
+  margin-bottom: 0.25rem;
   overflow: hidden;
   position: relative;
   box-shadow: 0 0 1rem transparent;
@@ -498,6 +526,9 @@ html {
   font-size: 1rem;
   margin-bottom: 0.5rem;
   text-transform: uppercase;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
 .programs__card-img {
@@ -525,6 +556,7 @@ html {
   width: 3rem;
   display: block;
   padding: 8px;
+  filter: drop-shadow(0 0 0.4rem rgba(0, 0, 0, 0.25));
 }
 
 .programs__card-icon-bg {
@@ -580,7 +612,7 @@ html {
   content: "";
   position: absolute;
   width: 10.5rem;
-  margin-top: -0.5rem;
+  margin-top: -0.4rem;
   height: 2px;
   background-color: #8bd917;
 }
