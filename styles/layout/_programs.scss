@@ -53,11 +53,14 @@
         margin-top: -4rem;
         overflow: hidden;
         position: relative;
-        transition: transform $-animation-duration ease-in-out;
+        box-shadow: 0 0 1rem transparent;
+        transition: transform $-animation-duration ease-in-out, box-shadow $-animation-duration ease-in-out, z-index $-animation-duration linear;
         transform: scale(1);
+        z-index: 0;
         &:hover {
             transform: scale(1.05);
-            box-shadow: 0 0 0.25 black;
+            box-shadow: 0 0 0.5rem black;
+            z-index: 1000;
         }
     }
     
@@ -101,7 +104,7 @@
         left: 0;
         width: 100%;
         height: $-programs-icon-width;
-        box-shadow: 0 0 0.25 black;
+        box-shadow: 0 0 1 black;
         z-index: 4;
         transform: translate(calc(-100% + #{$-programs-icon-width}), 0);
         transition: transform $-animation-duration ease-in-out;
@@ -120,7 +123,7 @@
         z-index: 3;
         text-shadow: 0 0 0.225rem black;
         overflow: hidden;
-        background-image: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.4) 20%);
+        background-image: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.3) 20%);
         transform: translate(0, calc(100% - 7.25rem));
         transition: transform $-animation-duration ease-in-out;
         .programs__card:hover & {
