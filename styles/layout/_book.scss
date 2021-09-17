@@ -1,0 +1,63 @@
+@use "../abstracts/" as *;
+@use "sass:color";
+.book {
+    position: relative;
+    overflow: hidden;
+}
+
+.book__container {
+    position: relative;
+    z-index: 5;
+    @include make-container();
+}
+
+.book__video {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    width: 100%;
+    z-index: 0;
+}
+
+.book__video-filter {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: color.scale($prim-color, $alpha: -95%);
+    z-index: 1;
+}
+
+.book__title {
+    color: white;
+    text-transform: uppercase;
+    font-size: 4rem;
+    font-weight: bolder;
+    letter-spacing: 0.07em;
+    text-align: center;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    padding-top: 4rem;
+    padding-bottom: 1rem;
+    text-shadow: 0 0 0.225rem black;
+}
+
+.book__desc {
+    max-width: 40rem;
+    margin: 0 auto;
+    color: white;
+    text-shadow: 0 0 0.225rem black;
+    column-count: 2;
+    column-gap: 4rem;
+    column-rule: solid 0.125rem rgba(255, 255, 255, 0.8);
+    padding: 2rem;
+    text-align: justify;
+}
+
+.book__button {
+    text-align: center;
+    padding: 3rem 0 5rem 0;
+}

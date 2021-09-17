@@ -53,6 +53,9 @@
     @media (max-width: $breakpoint-s) {
         background-size: cover;
     }
+    @media (max-width: $breakpoint-xs) {
+        background-size: cover;
+    }
 }
 
 .header::after {
@@ -73,7 +76,7 @@
     clear: both;
     padding-top: 6rem;
     @media (max-width: $breakpoint-m) {
-        padding-top: 3rem;
+        padding-top: 2rem;
     }
     @media (max-width: $breakpoint-s) {
         padding-top: 3rem;
@@ -94,17 +97,11 @@
     animation-duration: 2.5s;
     animation-timing-function: ease-in-out;
     animation-fill-mode: both;
-    @media (max-width: $breakpoint-l) {
-        font-size: 7rem;
-        margin-bottom: 1.5rem;
-    }
     @media (max-width: $breakpoint-m) {
-        font-size: 6rem;
-        margin-top: 1rem;
+        font-size: 5rem;
     }
     @media (max-width: $breakpoint-s) {
-        font-size: 5rem;
-        margin-top: -0.5rem;
+        font-size: 3rem;
     }
 }
 
@@ -147,6 +144,11 @@
         font-size: 0.5rem;
         letter-spacing: 0.3rem;
         width: 29rem;
+    }
+    @media (max-width: $breakpoint-xs) {
+        font-size: 0.5rem;
+        letter-spacing: 0.2rem;
+        width: 25rem;
     }
 }
 

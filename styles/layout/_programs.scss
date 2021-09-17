@@ -3,36 +3,35 @@
     $-animation-duration: 0.5s;
     .programs {
         background-color: $programs-bg;
-        margin-bottom: 5rem;
         position: relative;
-        padding-bottom: 8rem;
-    }
-    
-    .programs::before {
-        bottom: 0;
-        left: 0;
-        right: 0;
-        position: absolute;
-        content: "bye, stress!";
-        font-size: min(calc(100vw / 20), 30rem);
-        text-transform: uppercase;
-        font-weight: bold;
-        color: $prim-color;
-        text-align: center;
-        opacity: 0.4;
-        white-space: nowrap;
-        overflow: hidden;
-        @media (max-width: $breakpoint-l) {
-            bottom: 2rem;
-        }
-        @media (max-width: $breakpoint-m) {
-            bottom: 2rem;
-        }
-        @media (max-width: $breakpoint-s) {
-            bottom: 3rem;
-        }
-        @media (max-width: $breakpoint-xs) {
-            bottom: 3rem;
+        padding-bottom: 10rem;
+        &::before {
+            bottom: 0;
+            left: 0;
+            right: 0;
+            position: absolute;
+            padding-bottom: 1rem;
+            content: "bye, stress!";
+            font-size: min(calc(100vw / 20), 30rem);
+            text-transform: uppercase;
+            font-weight: bold;
+            color: $prim-color;
+            text-align: center;
+            opacity: 0.4;
+            white-space: nowrap;
+            overflow: hidden;
+            @media (max-width: $breakpoint-l) {
+                bottom: 2rem;
+            }
+            @media (max-width: $breakpoint-m) {
+                bottom: 2rem;
+            }
+            @media (max-width: $breakpoint-s) {
+                bottom: 3rem;
+            }
+            @media (max-width: $breakpoint-xs) {
+                bottom: 3rem;
+            }
         }
     }
     
@@ -41,7 +40,7 @@
         position: relative;
         text-transform: uppercase;
         font-size: 4rem;
-        font-weight: 500;
+        font-weight: bolder;
         letter-spacing: 0.07em;
         text-align: center;
         padding-top: 3rem;
@@ -147,7 +146,7 @@
         z-index: 3;
         text-shadow: 0 0 0.225rem black;
         overflow: hidden;
-        background-image: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.3) 20%);
+        background-image: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.2) 30%);
         transform: translate(0, calc(100% - 7.25rem));
         transition: transform $-animation-duration ease-in-out;
         .programs__card:hover & {
