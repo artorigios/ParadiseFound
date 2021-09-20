@@ -1,0 +1,128 @@
+@use "../abstracts/" as *;
+@use "sass:color";
+.footer {
+    background-color: $programs-bg;
+    padding: 3rem 0 0.5rem 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.footer__container {
+    @include make-container();
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-bottom: 2rem;
+    border-bottom: 0.175rem solid rgba(255, 255, 255, 0.2);
+    @media (max-width: $breakpoint-s) {
+        flex-direction: column;
+    }
+}
+
+.footer__contact-left {
+    flex: 0 0 auto;
+    margin-right: 5rem;
+    @media (max-width: $breakpoint-s) {
+        order: 2;
+        margin-right: 0rem;
+    }
+}
+
+.footer__title {
+    color: $prim-color;
+    text-transform: uppercase;
+    font-size: 4rem;
+    font-weight: bolder;
+    letter-spacing: 0.07em;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+.footer__text {
+    color: $prim-color;
+    padding-bottom: 2.5rem;
+}
+
+.footer__contact-item {
+    position: relative;
+    margin-bottom: 0.75rem;
+}
+
+.footer__contact-item-icon {
+    background-color: $thir-color;
+    height: 4rem;
+    width: 4rem;
+    text-align: center;
+    border-radius: 10000px;
+    font-size: 2.5rem;
+    z-index: 2;
+    position: relative;
+}
+
+.footer__contact-item-link {
+    position: absolute;
+    left: 2rem;
+    top: 0.25rem;
+    white-space: nowrap;
+    background-color: $sec-color;
+    text-decoration: none;
+    color: $prim-color;
+    padding: 1rem 2rem;
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    width: 16rem;
+    text-align: center;
+    z-index: 1;
+}
+
+.footer__logo-container {
+    font-size: 17rem;
+    margin-top: 0.225em;
+    color: $prim-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @media (max-width: $breakpoint-m) {
+        font-size: 12rem;
+    }
+    @media (max-width: $breakpoint-s) {
+        font-size: 6rem;
+    }
+}
+
+.footer__logo-icon {
+    display: flex;
+    flex: 0 0 auto;
+    justify-content: center;
+    align-items: center;
+    @media (max-width: $breakpoint-s) {
+        order: 1;
+        justify-content: start;
+        padding-bottom: 2rem;
+    }
+}
+
+.footer__footer {}
+
+.footer__footer-list {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.footer__footer-link {
+    display: inline-block;
+    color: rgba(255, 255, 255, 0.65);
+    text-decoration: none;
+    padding: 0.5rem 1.5rem;
+    white-space: nowrap;
+    transition: color 0.25s ease-in-out;
+    &:hover {
+        color: $prim-color;
+    }
+    @media (max-width: $breakpoint-xs) {
+        padding: 0.5rem 0.5rem;
+    }
+}

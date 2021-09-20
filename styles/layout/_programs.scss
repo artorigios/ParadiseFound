@@ -45,9 +45,26 @@
         text-align: center;
         padding-top: 3rem;
         margin-bottom: 2rem;
-        white-space: nowrap;
         text-overflow: ellipsis;
         overflow: hidden;
+        @media (max-width: $breakpoint-l) {
+            top: 0.15rem;
+            bottom: 3rem;
+            line-height: 3.5rem;
+        }
+        @media (max-width: $breakpoint-m) {
+            top: 0.2rem;
+            bottom: 3rem;
+            line-height: 3.5rem;
+        }
+        @media (max-width: $breakpoint-s) {
+            bottom: 2.5rem;
+            line-height: 3.5rem;
+        }
+        @media (max-width: $breakpoint-xs) {
+            bottom: 2rem;
+            line-height: 3.5rem;
+        }
     }
     
     .programs__container {
