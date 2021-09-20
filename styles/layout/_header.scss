@@ -97,11 +97,19 @@
     animation-duration: 2.5s;
     animation-timing-function: ease-in-out;
     animation-fill-mode: both;
+    @media (max-width: $breakpoint-l) {
+        font-size: 5rem;
+    }
     @media (max-width: $breakpoint-m) {
         font-size: 5rem;
     }
     @media (max-width: $breakpoint-s) {
-        font-size: 3rem;
+        font-size: 5rem;
+        margin-top: 1rem;
+    }
+    @media (max-width: $breakpoint-xs) {
+        font-size: 4rem;
+        margin-top: 0rem;
     }
 }
 

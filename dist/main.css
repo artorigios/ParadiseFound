@@ -192,6 +192,11 @@ html {
   animation-timing-function: ease-in-out;
   animation-fill-mode: both;
 }
+@media (max-width: 75em) {
+  .header__title {
+    font-size: 5rem;
+  }
+}
 @media (max-width: 62em) {
   .header__title {
     font-size: 5rem;
@@ -199,7 +204,14 @@ html {
 }
 @media (max-width: 48em) {
   .header__title {
-    font-size: 3rem;
+    font-size: 5rem;
+    margin-top: 1rem;
+  }
+}
+@media (max-width: 36em) {
+  .header__title {
+    font-size: 4rem;
+    margin-top: 0rem;
   }
 }
 
