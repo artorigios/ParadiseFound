@@ -44,6 +44,9 @@
     text-align: justify;
     margin-top: 0.2rem;
     font-size: 1.1rem;
+    @media (max-width: $breakpoint-s) {
+        text-align: left;
+    }
 }
 
 .intro__images {

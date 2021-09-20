@@ -1,9 +1,9 @@
 # ParadiseFound
-A webdesign project for a tropical themed spa &amp; resort. 🌴
+A webdesign project for a spa &amp; resort. 🌴
 
 # Goals
 
-- fully fleshed out website
+- fully fleshed out landing page
   - using animations, css-grid and an interactive menu
 - working with SASS
 - creating BEM components

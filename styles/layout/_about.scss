@@ -2,9 +2,9 @@
 @use "sass:color";
 $-img-size: 30rem;
 .about {
-    background-color: white;
-    padding-top: 3rem;
-    padding-bottom: 5rem;
+    background-color: $prim-color;
+    padding-top: 4rem;
+    padding-bottom: 7rem;
 }
 
 .about__slide {
@@ -151,26 +151,25 @@ $-img-size: 30rem;
 }
 
 .about__quote {
-    font-size: 1.1rem;
-    font-style: 900;
-    color: white;
+    font-size: 1rem;
+    color: $prim-color;
     padding-bottom: 0.7rem;
     font-weight: 500;
     background-color: $thir-color;
     text-shadow: 0 0 0.5rem rgb(99, 99, 99);
-    line-height: 1.1rem;
+    line-height: 1rem;
     text-transform: uppercase;
     letter-spacing: 0.2rem;
     text-shadow: 0 0 0.5rem rgba(0, 0, 0, 1);
     padding: 1rem;
-    &::before {
-        content: "» ";
-        font-size: 2rem;
-        opacity: 0.4;
-    }
-    &::after {
-        content: " «";
-        font-size: 2rem;
-        opacity: 0.4;
-    }
+    // &::before {
+    //     content: "» ";
+    //     font-size: 2rem;
+    //     opacity: 0.4;
+    // }
+    // &::after {
+    //     content: " «";
+    //     font-size: 2rem;
+    //     opacity: 0.4;
+    // } 
 }
