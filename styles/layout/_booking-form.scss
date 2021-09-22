@@ -1,0 +1,125 @@
+@use "../abstracts/" as *;
+@use "sass:color";
+@use "sass:math";
+$slope-incline: math.asin(0.1);
+$form-bg: rgba(0, 0, 0, 0.8);
+$form-height:50rem;
+$form-width:30rem;
+.booking-form {
+    display: none;
+    &:target {
+        display: flex;
+    }
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: $form-bg;
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+    color: white;
+    z-index: 10;
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        animation-name: booking-form--fade-in;
+        animation-duration: 1s;
+        animation-timing-function: ease-in-out;
+        animation-delay: 0s;
+        animation-iteration-count: 1;
+        background-color: rgba(0, 0, 0, 0.75);
+        @supports(backdrop-filter: blur(2.5rem)) {
+            background-color: rgba(0, 0, 0, 0.15);
+            backdrop-filter: blur(2.5rem);
+        }
+    }
+}
+
+.booking-form__content {
+    position: relative;
+    width: $form-height;
+    height: $form-width;
+    padding-left: $form-width *0.65;
+    background-image: linear-gradient(#{90deg + $slope-incline}, transparent 33%, rgba($sec-color, 0.7) 33.15%),
+    linear-gradient(90deg, transparent 33%, rgba(255, 255, 255, 0.5) 100%),
+    url("../images/pexels-olya-kobruseva-7089179.jpg");
+    background-size: auto, auto, cover;
+    background-position: center center, center center, 70% 30%;
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    box-shadow: 0 0 1rem black;
+    animation-name: booking-form__content--fade-in;
+    animation-duration: 1s;
+    animation-delay: 1s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: backwards;
+}
+
+.booking-form__off {
+    cursor: pointer;
+    display: block;
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    width: 1.25rem;
+    height: 1.25rem;
+    color: transparent;
+    border-radius: 100000px;
+    filter: drop-shadow(0 0 0.5rem rgba(0, 0, 0, 0.5));
+    background-image: linear-gradient(-45deg,
+    transparent 44%,
+    #{$prim-color} 45%,
+    #{$prim-color} 55%,
+    transparent 56%),
+    linear-gradient(45deg,
+    transparent 44%,
+    #{$prim-color} 45%,
+    #{$prim-color} 55%,
+    transparent 56%);
+}
+
+.booking-form__title {
+    color: $prim-color;
+    text-transform: uppercase;
+    padding-top: 3rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 0.4rem;
+    text-shadow: 0 0 0.25rem rgba(0, 0, 0, 0.5);
+}
+
+.bookingform__submit {
+    text-align: right;
+    margin-right: 1.5rem;
+    margin-top: 1rem;
+}
+
+.booking-form__desc {
+    font-weight: 250;
+    text-shadow: 0 0 0.25rem rgba(0, 0, 0, 0.5);
+}
+
+@keyframes booking-form--fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes booking-form__content--fade-in {
+    0% {
+        transform: translate(0, calc(-50vh - 50%));
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+}
